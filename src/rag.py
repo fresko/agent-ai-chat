@@ -37,7 +37,7 @@ class QAModel:
     return self.qa_chain.run(input_documents=retriever_doc, question=request)  
 
   def load_data(self):
-    with open(PATH_TO_DATA) as ps:
+    with open(PATH_TO_CHROMA) as ps:
       urls = [source for source in ps.readlines()]
       self.urls = WebBaseLoader(urls).load()
 
