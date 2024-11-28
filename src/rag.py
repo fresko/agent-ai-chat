@@ -16,7 +16,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 PATH_TO_DATA = "docs/url.txt"
-PATH_TO_CHROMA = "./db"
+PATH_TO_CHROMA = "docs/db"
 
 class QAModel:
   def __init__(self):
