@@ -1,6 +1,6 @@
 import streamlit as st
 import streamlit_chat as st_message
-from src.rag import QAModel as RAGModel
+from rag import QAModel as RAGModel
 import google.generativeai as genai
 import os
 from dotenv import load_dotenv
