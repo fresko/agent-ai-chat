@@ -15,7 +15,7 @@ import google.generativeai as genai
 from dotenv import load_dotenv
 
 load_dotenv()
-PATH_TO_DATA = "/docs/url.txt"
+PATH_TO_DATA = "docs/url.txt"
 PATH_TO_CHROMA = "./db"
 
 class QAModel:
