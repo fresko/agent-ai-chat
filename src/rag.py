@@ -1,3 +1,4 @@
+
 from langchain.document_loaders import WebBaseLoader
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain.vectorstores import Chroma
@@ -15,8 +16,8 @@ import google.generativeai as genai
 from dotenv import load_dotenv
 
 load_dotenv()
-PATH_TO_DATA = "docs/url.txt"
-PATH_TO_CHROMA = "docs/db"
+PATH_TO_DATA = "../docs/url.txt"
+PATH_TO_CHROMA = "../docs/db"
 
 class QAModel:
   def __init__(self):
@@ -27,13 +28,16 @@ class QAModel:
     self.init_qa_retriever_new()
     self.init_qa_chain()
   
-  def call(self,request:str):
+  def __call0__(self,request:str):
     return self.retriever({"query":request})  
+    #return self.retriever.invoke({"input":request})
+    #return self.qa_chain.run(input_documents=retriever_doc, question=request) 
+
     
-  def call_new(self,request:str):
+  def __call__(self,request:str):
     return self.retriever.invoke({"input":request})
 
-  def call_new2(self,retriever_doc,request:str):
+  def __call2__(self,retriever_doc,request:str):
     return self.qa_chain.run(input_documents=retriever_doc, question=request)  
 
   def load_data(self):

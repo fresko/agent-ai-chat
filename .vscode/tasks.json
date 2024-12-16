@@ -1,0 +1,19 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "shell",
+			"label": "installDependencies",
+			"command": "pip",
+			"args": [
+				"install",
+				"-qU",
+				"langchain_community",
+				"beautifulsoup4"
+			],
+			"presentation": {
+				"reveal": "silent"
+			}
+		}
+	]
+}
